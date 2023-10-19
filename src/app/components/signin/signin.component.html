@@ -1,0 +1,148 @@
+<div>
+  <section
+    class="vh-150 bg-image"
+    style="
+      background-image: url('https://www.allbusiness.com/asset/2018/07/online-shopping-concept.jpg');
+    "
+  >
+    <div class="container py-3 h-20">
+      <div
+        class="row d-flex justify-content-center align-items-center h-100 mb-4"
+      >
+        <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+          <div class="card bg-white" style="border-radius: 1rem">
+            <div class="card-body p-5 text-center">
+              <div class="mb-md-5 mt-md-4 pb-5">
+                <h1 class="fw-bold mb-2 text-uppercase">Sign in</h1>
+                <p class="text-black-50 mb-5">
+                  Stay updated on your professional world
+                </p>
+                <form (ngSubmit)="onSubmit(loginForm)" #loginForm="ngForm">
+                  <div class="form-outline form-white mb-4">
+                    <label
+                      class="form-label"
+                      for="typeEmailX"
+                      placeholder="Email or phone number"
+                    ></label>
+                    <input
+                      type="email"
+                      id="typeEmailX"
+                      name="email"
+                      class="form-control form-control-lg"
+                      placeholder="Email or Phone"
+                      ngModel
+                      required
+                      email
+                      #modelEmail="ngModel"
+                      [ngClass]="modelEmail.invalid ? 'is-invalid' : ''"
+                    />
+                    <div *ngIf="modelEmail.invalid" class="invalid-feedback">
+                      please enter a valid email
+                    </div>
+                  </div>
+
+                  <div class="form-outline form-white mb-4">
+                    <label class="form-label" for="typePasswordX"></label>
+                  </div>
+                    <input
+                      type="password"
+                      id="typePasswordX"
+                      class="form-control form-control-lg"
+                      placeholder="Password"
+                      name="password"
+                      ngModel
+                      required
+                      password
+                      #modelPassword="ngModel"
+                      [ngClass]="modelPassword.invalid && modelPassword.touched ?'is-invalid' : ''"
+                    />
+                    <div *ngIf="modelPassword.invalid" class="invalid-feedback mt-5">
+                      Password must be greater than 4 characters
+                    </div>
+                    <div *ngIf="error.length > 0" class="text-danger">{{error}}</div>
+                   
+
+                  <p class="large mb-5 pb-lg-4 pr-5">
+                    <a class="text-blue-50" href="#!">Forgot password?</a>
+                  </p>
+                  <div class="d-grid gap-2 align-items- center mb-4 rounded">
+                    <button class="btn btn-primary" type="submit" [disabled]="loginForm.invalid">
+                      Sign in
+                    </button>
+                  </div>
+                </form>
+                <div
+                  id="or-seperator"
+                  class="or-seperator mt-12 snapple seperator mb-4"
+                >
+                  <span class="or">or</span>
+                </div>
+                <div class="d-grid gap-2 align-items-center mb-4">
+                  <button class="btn btn-outline-secondary" type="button">
+                    <img src="" alt="" />
+
+                    Sign in with a one time link
+                  </button>
+                </div>
+                <div class="d-grid gap-2 align-items-center mb-4">
+                  <button class="btn btn-outline-secondary" type="button">
+                    Continue with Google
+                  </button>
+                </div>
+                <div class="d-grid gap-2 align-items-center">
+                  <button class="btn btn-outline-secondary" type="button">
+                    Sign in with Apple
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="d-flex justify-content-center mb-4">
+        <p class="mb-0">
+          New to Linkedln?
+          <a href="#!" class="text-blue-50 fw-bold">Join now</a>
+        </p>
+      </div>
+      <div class="d-flex justify-content-center gap-2">
+        <p>2023</p>
+        <p>User argument</p>
+        <p>Privacy Policy</p>
+        <p>Community Guidelines</p>
+        <p>Cookie Policy</p>
+        <p>Copyright Policy</p>
+        <p>Send Feedback</p>
+        <div class="dropdown">
+          <button
+            class="btn btn-secondary dropdown-toggle btn-sm"
+            type="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Languages
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Arabic</a></li>
+            <li><a class="dropdown-item" href="#">German</a></li>
+            <li>
+              <a class="dropdown-item" href="#">English</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#">Hindi</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#">Japanasee</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#">Korean</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#">Taglog</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
