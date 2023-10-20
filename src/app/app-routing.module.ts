@@ -10,8 +10,7 @@ import { authGuard } from './common/auth.guard';
 import { IntroComponent } from './components/intro/intro.component';
 
 const routes: Routes = [
-  {path: 'intro', component: IntroComponent},
-  {path: '', component: HomeComponent},
+  {path: '', component: IntroComponent},
   { path: 'signin', component: SigninComponent },
   { path: 'signup', component: SignupComponent },
   { path: 'home', component: HomeComponent },
